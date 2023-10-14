@@ -1,0 +1,35 @@
+.card-header {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    width: 20%;
+}
+
+/* .ch-icon {
+    border: 2px solid blue;
+} */
+
+.ch-title {
+    /* border: 2px solid green; */
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.ch-btns {
+    margin-left: auto;
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ant-icon {
+    /* border: 2px solid red; */
+    /* margin-inline: .1rem; */
+    color: #636e72 !important;
+    outline: none;
+    border: none;
+    background: none !important;
+    font-size: .8rem !important;
+}
