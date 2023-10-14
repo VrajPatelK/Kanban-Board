@@ -1,9 +1,8 @@
 .card-header {
-    /* border: 2px solid red; */
+    /* border: 2px solid rgb(13, 0, 255); */
     display: flex;
     align-items: center;
     padding: .5rem;
-    width: 20%;
 }
 
 /* .ch-icon {
@@ -17,8 +16,8 @@
 }
 
 .ch-btns {
-    margin-left: auto;
     /* border: 2px solid yellow; */
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

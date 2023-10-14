@@ -2,10 +2,9 @@
     /* border: 2px solid brown; */
     border-radius: .2rem;
     background: #fff !important;
-    width: 20%;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    margin-inline: auto;
+    margin-top: 1rem;
 }
 
 .cb-head {
@@ -80,4 +79,13 @@
 
 .txt {
     margin-left: .5rem;
+}
+
+/* ant-design overwrite */
+.ant-checkbox-inner {
+    border-radius: 5rem !important;
+}
+
+.ant-checkbox-inner-custom {
+    background-color: #3c40c6 !important;
 }

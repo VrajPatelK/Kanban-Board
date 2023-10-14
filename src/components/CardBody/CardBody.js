@@ -1,14 +1,14 @@
 import React from "react";
-import { Avatar, Badge } from "antd";
-import { InfoOutlined, UserOutlined } from "@ant-design/icons";
 import "./CardBody.css";
+import { InfoOutlined, UserOutlined } from "@ant-design/icons";
+import { Avatar, Badge, Checkbox } from "antd";
 
 //
-const CardBody = () => {
+const CardBody = (props) => {
   return (
     <div className="card-body">
       <div className="cb-head">
-        <div className="cb-head-id">CMA-11 (ID)</div>
+        <div className="cb-head-id">{props.ticket.id}</div>
         <div className="cb-head-avtar">
           {/* offset={[left, top]} */}
           <Badge dot={true} offset={[0, 20]} color="#dfe6e9" size="default">
@@ -16,7 +16,9 @@ const CardBody = () => {
           </Badge>
         </div>
       </div>
-      <div className="cb-title">Conduct Security Assessment</div>
+      <div className="cb-title">
+        <Checkbox>{props.ticket.title}</Checkbox>
+      </div>
       <div className="cb-footer">
         <div className="cb-footer-icon">
           <span className="span-info-icon">
