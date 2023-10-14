@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 
-import CardBody from "./components/CardBody/CardBody";
-import CardHeader from "./components/CardHeader/CardHeader";
-import Card from "./components/Card/Card";
 import "./index.css";
 import "./App.css";
+import Users from "./components/Users/Users";
+import Status from "./components/Status/Status";
 
 function App() {
-  //
+  //----------------- STATE-HANDLING -----------------
   const [users, setUsers] = useState([]);
   const [tickets, setTickets] = useState([]);
 
+  //----------------- API-FETCH -----------------
   useEffect(() => {
     const fetchTemp = async () => {
       try {
@@ -34,24 +34,49 @@ function App() {
     fetchTemp();
   }, []);
 
-  //
-  const USER_CONTENT = users.map((user, index) => {
-    const USER_TICKETS = tickets.filter((ticket) => {
-      return ticket.userId === user.id;
-    });
+  //----------------- USER_CONTENT -----------------
+  // const USER_CONTENT = users.map((user, index) => {
+  //   const USER_TICKETS = tickets.filter((ticket) => {
+  //     return ticket.userId === user.id;
+  //   });
 
-    return (
-      <Card key={index}>
-        <CardHeader user={user} noOfTickets={USER_TICKETS.length} />
-        {USER_TICKETS.map((ticket) => {
-          return <CardBody key={ticket.id} ticket={ticket} />;
-        })}
-      </Card>
-    );
-  });
+  //   return (
+  //     <Card key={index}>
+  //       <CardHeader user={user} noOfTickets={USER_TICKETS.length} type="USER" />
+  //       {USER_TICKETS.map((ticket) => {
+  //         return <CardBody key={ticket.id} ticket={ticket} type="USER" />;
+  //       })}
+  //     </Card>
+  //   );
+  // });
+
+  //----------------- STATUS_CONTENT -----------------
+  // const STATUS_CONTENT = users.map((user, index) => {
+  //   const USER_TICKETS = tickets.filter((ticket) => {
+  //     return ticket.userId === user.id;
+  //   });
+
+  //   return (
+  //     <Card key={index}>
+  //       <CardHeader
+  //         user={user}
+  //         noOfTickets={USER_TICKETS.length}
+  //         type="STATUS"
+  //       ></CardHeader>
+  //       {USER_TICKETS.map((ticket) => {
+  //         return <CardBody key={ticket.id} ticket={ticket} type="STATUS" />;
+  //       })}
+  //     </Card>
+  //   );
+  // });
 
   //
-  return <div className="main-card-div">{USER_CONTENT}</div>;
+  return (
+    <div className="main-card-div">
+      <Users users={users} tickets={tickets} />
+      {/* <Status users={users} tickets={tickets} /> */}
+    </div>
+  );
 }
 
 export default App;
