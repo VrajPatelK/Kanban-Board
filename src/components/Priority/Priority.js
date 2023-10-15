@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Status.css";
+import "./Priority.css";
 import Card from "../Card/Card";
 import CardHeader from "../CardHeader/CardHeader";
 import CardBody from "../CardBody/CardBody";
@@ -18,11 +18,11 @@ const BG_COLORS = [
 ];
 
 //
-const Status = (props) => {
+const Priority = (props) => {
   //
   const ctx = useContext(StateContext);
   const { users, tickets } = ctx;
-  const status = ctx.status;
+  const priorities = ctx.priorities;
 
   //
   let TICKETS_WITH_USER = tickets.map((ticket) => {
@@ -31,11 +31,14 @@ const Status = (props) => {
   });
 
   //
-  const STATUS_CONTENT = status.map((st, index) => {
-    const TICKETS = TICKETS_WITH_USER.filter((ticket) => ticket.status === st);
+  const PRIORITY_CONTENT = priorities.map((pr, index) => {
+    const TICKETS = TICKETS_WITH_USER.filter(
+      (ticket) => ticket.priority === pr.val
+    );
+
     return (
       <Card key={index}>
-        <CardHeader title={st} noOfTickets={TICKETS.length}></CardHeader>
+        <CardHeader title={pr.name} noOfTickets={TICKETS.length}></CardHeader>
         {TICKETS.map((ticket) => {
           return (
             <CardBody key={ticket.id} ticket={ticket}>
@@ -62,7 +65,7 @@ const Status = (props) => {
   });
 
   //
-  return <>{STATUS_CONTENT}</>;
+  return <>{PRIORITY_CONTENT}</>;
 };
 
-export default Status;
+export default Priority;

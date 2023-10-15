@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./User.css";
 import Card from "../Card/Card";
 import CardHeader from "../CardHeader/CardHeader";
 import CardBody from "../CardBody/CardBody";
 import { Avatar, Badge } from "antd";
 import { UserOutlined } from "@ant-design/icons";
+import StateContext from "../../store/StateContext";
 
 //
 const BG_COLORS = [
@@ -19,8 +20,9 @@ const BG_COLORS = [
 
 //
 const Users = (props) => {
+  const ctx = useContext(StateContext);
   //
-  const { users, tickets } = props;
+  const { users, tickets } = ctx;
 
   //
   const USER_CONTENT = users.map((user, index) => {
