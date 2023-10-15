@@ -1,6 +1,5 @@
 import React from "react";
 import "./CardBody.css";
-import { Checkbox } from "antd";
 
 // img realted content
 import { DashOutlined, InfoOutlined } from "@ant-design/icons";
@@ -16,7 +15,6 @@ import todo from "../../assets/todo.png";
 
 //
 const CardBody = (props) => {
-  console.log(props.ticket.priority);
   return (
     <div className="card-body">
       <div className="cb-head">

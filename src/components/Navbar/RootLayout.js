@@ -55,8 +55,9 @@ const RootLayout = () => {
           trigger={["click"]}
           className="dropdown"
         >
-          <a
+          <div
             onClick={(e) => e.preventDefault()}
+            href="#"
             style={{
               display: "flex",
               width: "fit-content",
@@ -69,7 +70,7 @@ const RootLayout = () => {
               Display
               <DownOutlined />
             </Space>
-          </a>
+          </div>
         </Dropdown>
       </div>
       <div className="main-card-div">

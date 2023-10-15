@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { NavLink, useLocation } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import StateContext from "../../store/StateContext";
@@ -7,8 +6,6 @@ import StateContext from "../../store/StateContext";
 const OrderNav = (props) => {
   //
   const ctx = useContext(StateContext);
-  const location = useLocation();
-  const _isActive = (path) => location.pathname === path;
 
   const items = [
     {
@@ -36,11 +33,11 @@ const OrderNav = (props) => {
       trigger={["click"]}
       className="dropdown"
     >
-      <a onClick={(e) => e.preventDefault()}>
+      <div onClick={(e) => e.preventDefault()}>
         <Space>
           <DownOutlined />
         </Space>
-      </a>
+      </div>
     </Dropdown>
   );
 };

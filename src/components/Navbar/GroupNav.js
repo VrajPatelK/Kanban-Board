@@ -59,11 +59,11 @@ const GroupNav = () => {
       trigger={["click"]}
       className="dropdown"
     >
-      <a onClick={(e) => e.preventDefault()}>
+      <div onClick={(e) => e.preventDefault()}>
         <Space>
           <DownOutlined />
         </Space>
-      </a>
+      </div>
     </Dropdown>
   );
 };

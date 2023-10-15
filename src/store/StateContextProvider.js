@@ -17,7 +17,7 @@ export const StateContextProvider = (props) => {
   const [tickets, setTickets] = useState([]);
   const [orderBy, setOrderBy] = useState("");
   const [priorities, setPriorities] = useState(INITIAL_PRIORITIES);
-  const [status, setStatus] = useState(INITIAL_STATUS);
+  // const [status, setStatus] = useState(INITIAL_STATUS);
 
   //----------------- API-FETCH -----------------
   const fetchTemp = async () => {
@@ -29,7 +29,6 @@ export const StateContextProvider = (props) => {
       const responseData = await response.json();
 
       //
-      // console.log(responseData);
       setUsers(responseData["users"]);
       setTickets(responseData["tickets"]);
 
@@ -92,7 +91,7 @@ export const StateContextProvider = (props) => {
     users,
     tickets,
     priorities,
-    status,
+    status: INITIAL_STATUS,
     handleOrder,
   };
 
