@@ -1,70 +1,66 @@
-<!-- # Getting Started with Create React App
+# KANBAN-BOARD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
 
-## Available Scripts
+The KANBAN-BOARD project is a web application that allows you to manage and visualize tasks and work items using the Kanban methodology. With this application, you can organize tasks into boards, track their progress, and collaborate with your team effectively.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **React**: The frontend of the application is built using React, a popular JavaScript library for building user interfaces.
+- **CSS**: Custom CSS styles are used for enhancing the visual design and layout.
+- **Ant Design**: Ant Design components are integrated to provide a clean and user-friendly interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project is deployed and can be accessed at the following URL: [KANBAN-BOARD](https://kanban-board-submission.netlify.app/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project locally and start development, follow these steps:
 
-### `npm run build`
+1. **Clone the Repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/yourusername/KANBAN-BOARD.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the Project Directory**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd KANBAN-BOARD
+```
 
-### `npm run eject`
+3. **Install Dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the Development Server**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will be available at `http://localhost:3000` in your web browser. You can make changes to the code, and the development server will automatically reload the application for you.
 
-## Learn More
+## Deployment Steps
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To deploy this project on Netlify (as an example):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Create a Netlify Account: If you don't already have one, sign up for a Netlify account at [https://app.netlify.com/signup](https://app.netlify.com/signup).
 
-### Code Splitting
+2. Log in to Netlify: Log in to your Netlify account.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Connect Your Repository: Click "New Site from Git" in the Netlify dashboard and connect your project's Git repository (e.g., GitHub, GitLab).
 
-### Analyzing the Bundle Size
+4. Configure Build Settings:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Set the "Build Command" to `npm run build`.
+- Set the "Publish Directory" to `build` (or the appropriate build directory in your project).
 
-### Making a Progressive Web App
+5. Deploy Your Site: Click the "Deploy Site" button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+6. Access Your Deployed Site: Once the deployment is successful, you will receive a unique URL where your project is hosted. In this case, it's [https://kanban-board-submission.netlify.app/](https://kanban-board-submission.netlify.app/).
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+Enjoy using your Kanban board application! 🎉🙌😊🔥
