@@ -39,7 +39,12 @@ const Status = (props) => {
         {TICKETS.map((ticket) => {
           return (
             <CardBody key={ticket.id} ticket={ticket}>
-              <Badge dot={true} offset={[0, 20]} color="#dfe6e9" size="default">
+              <Badge
+                dot={true}
+                offset={[0, 20]}
+                color={ticket.user.available ? "red" : "#dfe6e9"}
+                size="default"
+              >
                 <Avatar
                   size="small"
                   style={{

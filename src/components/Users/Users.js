@@ -51,7 +51,12 @@ const Users = (props) => {
           return (
             <CardBody key={ticket.id} ticket={ticket}>
               {/* offset={[left, top]} */}
-              <Badge dot={true} offset={[0, 20]} color="#dfe6e9" size="default">
+              <Badge
+                dot={true}
+                offset={[0, 20]}
+                color={user.available ? "red" : "#dfe6e9"}
+                size="default"
+              >
                 <Avatar size="small" icon={<UserOutlined />} />
               </Badge>
             </CardBody>
